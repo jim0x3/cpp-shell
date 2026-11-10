@@ -35,7 +35,7 @@ std::string findExe(const std::string& exe) {
     }
 
     std::istringstream paths(pathEnv);
-    std::string dir;    
+    std::string dir;
     while (std::getline(paths, dir, ':')) {
         fs::path candidate = fs::path(dir) / exe;
         std::error_code ec;
